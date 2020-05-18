@@ -1,0 +1,102 @@
+{
+  "id": "e4400874-4655-4dbb-8c15-025c221773ee",
+  "version": "2.0",
+  "name": "IMDB_Testing_Elvira_002",
+  "url": "https://www.imdb.com",
+  "tests": [{
+    "id": "d4bc1cc1-f574-4390-9625-7e192b31a388",
+    "name": "SearchMovie",
+    "commands": [{
+      "id": "c113f742-f441-46d0-9e55-c44a06cda8c3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4f29fbb-fd85-485f-87f0-d74139379570",
+      "comment": "Find Search input",
+      "command": "assertElementPresent",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "true"
+    }, {
+      "id": "0790333a-7311-420b-bdf5-8644ecf0084b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "944x1019",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c361eb54-b84a-4efd-b104-5e70b93a04f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0615257d-c69d-4bd9-8dd4-11879085c8e3",
+      "comment": "Search inout is editable",
+      "command": "assertEditable",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "true"
+    }, {
+      "id": "6a9fc344-9d1c-4e12-9cba-67fe0b6b965f",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "gattaca"
+    }, {
+      "id": "da33db63-0e58-4c0e-b11c-ec874091af06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_2mXTyZmtWnrwCBj9tuEhuK .\\_2NPnhnjxKTlB8HDsb7RtwX",
+      "targets": [
+        ["css=.\\_2mXTyZmtWnrwCBj9tuEhuK .\\_2NPnhnjxKTlB8HDsb7RtwX", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1--item-0']/a/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5bd404e4-b0fc-4fdd-bd40-22f450bdd568",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d4bc1cc1-f574-4390-9625-7e192b31a388"]
+  }],
+  "urls": ["https://www.imdb.com/"],
+  "plugins": []
+}
